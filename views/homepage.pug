@@ -17,4 +17,5 @@ html(lang='en')
         tr
           td= video_game.properties.name
           td= video_game.properties.genre
-          td= video_game.properties.rating
+          td 
+            a(href=`/update-cobj?recordId=${video_game.id}`) #{video_game.properties.rating}
