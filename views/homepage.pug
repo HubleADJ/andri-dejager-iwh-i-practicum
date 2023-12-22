@@ -1,0 +1,20 @@
+doctype html
+
+html(lang='en')
+
+  body
+    h1 Custom Object Table
+    br
+    a(href="/update-cobj") Add/Update this table
+    br
+    table(style='width:100%', border='1')
+      tr
+        th Name
+        th Genre
+        th Rating
+
+      each video_game in data
+        tr
+          td= video_game.properties.name
+          td= video_game.properties.genre
+          td= video_game.properties.rating

@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        .form-wrapper
+            p Name: #{name}
+            p Genre: #{genre}
+            p Rating: #{rating}
+            form(method="POST")
+                label(for="newVal") New Rating between 0 and 5?
+                input(type="range" name="newVal" min='0' max='5' required)
+                input(type="submit" value="Submit")
+            br
+            a(href="/") Return to the homepage
